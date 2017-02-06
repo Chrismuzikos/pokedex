@@ -16,6 +16,33 @@
     	</form>
 
     	<script>
+        // Traitement data fr/en
+        const srcFr = 'https://raw.githubusercontent.com/oliver-j/pokemon-french/master/pokemon-french.json';
+        const srcEn = 'https://raw.githubusercontent.com/oliver-j/pokemon-english/master/pokemon-english.json';
+        const frPokemons = [];
+        const enPokemons = [];
+
+        fetch(srcFr)
+            .then(blob => blob.json())
+            .then(data => {
+                frPokemons.push(...data)
+                console.log(frPokemons)
+            })
+        fetch(srcEn)
+            .then(blob => blob.json())
+            .then(data => {
+                enPokemons.push(...data)
+                console.log(enPokemons)
+            })
+
+        // const translate = [];
+        //
+        // for (var j = 0; j < enPokemons.length; ++j) {
+        //
+        //       translate[enPokemons[j]] = frPokemons[j];
+        //       console.log(translate);
+        // }
+
     		const pokedex = 'https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json';
 
             const pokemons = [];
@@ -23,6 +50,7 @@
             fetch(pokedex)
                 .then(blob => blob.json())
                 .then(data => pokemons.push(...data.pokemon));
+                // console.log(pokemons)
 
                 function trouverPokemon(recherche, pokemons) {
                     return pokemons.filter(pokemon => {
