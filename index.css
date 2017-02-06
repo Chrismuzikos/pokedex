@@ -20,10 +20,10 @@ form {
 
 }
 h1 {
-    letter-spacing: -5px;
+    letter-spacing: 7px;
     font-family: 'Bangers', cursive;
     color:#ffcb05;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 7px;
     -webkit-text-stroke-color: #0071b9;
     text-align: center;
     font-size: 151px;
@@ -48,4 +48,8 @@ input {
     border-width:0 0 5px;
     outline:0;
     box-shadow:0 5px 10px rgba(0,0,0,.2);
+}
+img {
+    width: 42px;
+    height: 42px;
 }
